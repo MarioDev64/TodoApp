@@ -9,8 +9,10 @@
     }
   },
   "include": [
+    "**/*.ts",
+    "**/*.tsx",
     "app/**/*",
-    "src/**/*",
+    "components/**/*",
     ".expo/types/**/*",
     "expo-env.d.ts",
     "nativewind-env.d.ts",
