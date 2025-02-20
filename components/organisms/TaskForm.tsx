@@ -150,8 +150,6 @@ export default function TaskForm({ onSubmit, onCancel, initialData }: TaskFormPr
             )}
           </View>
 
-          <Text variant="body" className="text-foreground mt-6">:</Text>
-
           <View className="flex-1">
             <Text variant="caption1" className="text-muted-foreground mb-2">
               Minutes (1-59)
