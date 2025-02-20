@@ -72,7 +72,7 @@
 - **theme/**:  
   Theme configuration, color palettes, and hooks for managing color schemes.
 
-- ****test**/**:  
+- \***\*test**/\*\*:  
   Unit tests (e.g., tests for `taskStore` using Jest).
 
 ## ⚙️ Setup & Installation:
