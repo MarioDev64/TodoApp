@@ -1,4 +1,4 @@
-const { hairlineWidth, platformSelect } = require('nativewind/theme');
+const {hairlineWidth, platformSelect} = require('nativewind/theme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -51,7 +51,7 @@ module.exports = {
 };
 
 function withOpacity(variableName) {
-  return ({ opacityValue }) => {
+  return ({opacityValue}) => {
     if (opacityValue !== undefined) {
       return platformSelect({
         ios: `rgb(var(--${variableName}) / ${opacityValue})`,

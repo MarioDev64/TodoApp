@@ -5,7 +5,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx', '*.js', 'tests/**/*'],
       env: {
-        "jest": true,
+        jest: true,
       },
       parser: '@typescript-eslint/parser',
     },
