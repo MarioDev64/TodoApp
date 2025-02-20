@@ -1,19 +1,18 @@
-import Button from '@/components/Button';
-import {Alert, Text, View} from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
+import { useTaskStore } from '@/lib/store/taskStore';
+import TaskList from '@/components/organisms/TaskList';
 
-export default function Index() {
+export default function HomeScreen() {
+  const { tasks, reorderTasks, toggleTaskComplete, deleteTask } = useTaskStore();
+
   return (
-    <View className="flex-1 items-center justify-center gap-y-2">
-      <View className="items-center">
-        <Text className="text-4xl">Welcome to NativeWind!</Text>
-        <Text className="text-xl">Style your app with</Text>
-        <Text className="bg-yellow-100 text-3xl font-bold underline">Tailwind CSS!</Text>
-      </View>
-      <Button
-        label="Sounds good!"
-        onPress={() => {
-          Alert.alert('NativeWind', "You're all set up!");
-        }}
+    <View className="flex-1 bg-gray-50">
+      <TaskList
+        tasks={tasks}
+        onReorder={reorderTasks}
+        onDeleteTask={deleteTask}
+        onToggleComplete={toggleTaskComplete}
       />
     </View>
   );

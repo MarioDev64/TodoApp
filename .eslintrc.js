@@ -1,10 +1,12 @@
-// https://github.com/francoismassart/eslint-plugin-tailwindcss
 module.exports = {
   root: true,
   extends: ['plugin:prettier/recommended', 'plugin:tailwindcss/recommended'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.js'],
+      files: ['*.ts', '*.tsx', '*.js', 'tests/**/*'],
+      env: {
+        jest: true,
+      },
       parser: '@typescript-eslint/parser',
     },
   ],
